@@ -3,3 +3,4 @@ debian-sid.qcow2
 debian-sid
 qemu-system-aarch64
 qemu
+linux

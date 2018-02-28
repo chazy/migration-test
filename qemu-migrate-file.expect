@@ -4,7 +4,7 @@
 #
 
 if {[llength $argv] == 0} {
-  send_user "Usage: qemu-migrate-file.expect <qemu invocation>\n"
+  send_error "Usage: qemu-migrate-file.expect <qemu invocation>\n"
   exit 1
 }
 
@@ -24,7 +24,7 @@ set prompt {.*[\#\$] }
 proc status_output { status_string } {
     variable ftrace
 
-    send_user "############# $status_string ###############\n"
+    send_error "############# $status_string ###############\n"
 
     if {[string length $ftrace]} {
         puts $ftrace "$status_string"
